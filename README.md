@@ -24,5 +24,8 @@ $ irb
 $ rspec
 ```
 
-Approach
+To Implement
 ---
+* Deeper research on how to mock tests with an API.
+* Pull out methods that are not related to the API into another class.
+* Return error messages in the situations where username does not exist or repos are not public.
