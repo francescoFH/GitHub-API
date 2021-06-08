@@ -19,7 +19,7 @@ class GitHubApi
   end
 
   def get_user_languages(repos)
-    repos.map{|x| x.language }.compact
+    repos.map{ | x | x.language }.compact
   end
 
   def get_language_frequency(languages)
@@ -35,7 +35,7 @@ class GitHubApi
   end
 
   def sort_frequency(frequency)
-    frequency.sort_by {| key, value | value }.reverse
+    frequency.sort_by { | key, value | value }.reverse
   end
 
   def get_favourite_language(result)
