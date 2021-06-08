@@ -11,6 +11,7 @@ class GitHubApi
     languages = get_user_languages(repos)
     frequency = get_language_frequency(languages)
     result = sort_frequency(frequency)
+    get_favourite_language(result)
   end
 
   def get_user_repos
@@ -36,4 +37,9 @@ class GitHubApi
   def sort_frequency(frequency)
     frequency.sort_by {| key, value | value }.reverse
   end
+
+  def get_favourite_language(result)
+    result.first.first
+  end
+
 end
