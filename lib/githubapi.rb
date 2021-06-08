@@ -13,4 +13,8 @@ class GitHubApi
   def get_user_repos
     @user.rels[:repos].get.data
   end
+
+  def get_user_languages(repos)
+    repos.map{|x| x.language }.compact
+  end
 end
