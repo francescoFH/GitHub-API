@@ -4,6 +4,13 @@ require 'githubapi'
 describe GitHubApi do
   let(:user) { GitHubApi.new('francescoFH') }
 
+  describe '#calculate_favourite_language' do
+    it "returns a favourite language given a Github username" do
+      favourite_language = user.calculate_favourite_language
+      expect(favourite_language).to eq('Ruby')
+    end
+  end
+
   describe '#get_language_frequency' do
     it "calculates number of languages" do
       languages = ["JavaScript", "Ruby", "Ruby"]
